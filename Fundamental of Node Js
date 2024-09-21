@@ -1,0 +1,36 @@
+here i am practicing some basic java script code 
+var x=20; //if  x='20' then it will not matched
+if(x===20){
+    console.log("Matched")
+}
+// for loop
+for(i=0;i<10;i++){
+    console.log(i);
+}
+// array
+const arr=[2,4,6,8,3];
+console.log(arr[0]);
+------------------------------------------------------important question---------------------------
+you have two file 1st app.js and 2nd index.js
+in app.js---------------
+export let x=20;
+in index.js---------
+import {x} from './app'
+
+will it work here or not ?
+it will work on angular or react but will not work on node.js 
+because angular and react support ES Module.
+------------------------------------------------------------------
+in node js environment it will work like this
+in app.js
+module.exports={
+x:20,
+y:30
+}
+--------------
+index.js
+const app=require('./app')
+console.log(app) 
+output
+{ x:20,y:30} 
+----------------------------
