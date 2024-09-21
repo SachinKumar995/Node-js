@@ -1,0 +1,14 @@
+here i am going to start node js with basic here i am going to create first node js program
+I firstly created folder then enter into the folder then open cmd there and in cmd enter code . by wich my vs code will be open there 
+then i created a file named index.js 
+------------------------------------------------------------------------------------
+and write these code
+index.js
+console.log("Tejaswini sachin");
+var a=20;
+var b=30;
+console.log(a+b);
+----------------------------------------------------------------
+how to run these code
+open the terminal 
+node .\index.js
