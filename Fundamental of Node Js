@@ -25,7 +25,9 @@ in node js environment it will work like this
 in app.js
 module.exports={
 x:20,
-y:30
+y:30,
+z=function(){
+return 10;
 }
 --------------
 index.js
@@ -34,3 +36,5 @@ console.log(app)
 output
 { x:20,y:30} 
 ----------------------------
+console.log(app.y) //30
+console.log(app.z()) //10
