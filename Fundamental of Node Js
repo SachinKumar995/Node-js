@@ -38,3 +38,21 @@ output
 ----------------------------
 console.log(app.y) //30
 console.log(app.z()) //10
+
+
+--------------------------------------------------------------------
+use of filter function in js
+It always works on array and used to filter item
+const arr=[1,2,6,8,7,5,4,2,1,2]
+arr.filter((item)=>{
+console.log(item)
+})
+---------------------------output-------
+[1,2,6,8,7,5,4,2,1,2]
+----------------------------------------
+const result=arr.filter((item)=>{
+       return item===2
+})
+console.warn(result)
+-------------------------output---------------------
+[2,2]
