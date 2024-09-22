@@ -1,0 +1,17 @@
+every programing language has already some feature such as to connect with database, to call API, to connect with file these are core module
+eg- file system,buffer,HTTP
+  ----------------------------------Global module------------------------------------
+  Those module which does not need to be imported is called global module
+  eg: console.log("sachin")
+------------------------------------Non global module--------------------------------
+  Those module which need to be imported is call non global module
+eg:
+index.js
+const fs=require('fs')
+fs.writeFileSync("hello","sachin")
+
+here fs is imported so it is non global module
+
+
+
+  
