@@ -1,0 +1,38 @@
+what is api ?
+An API (Application Programming Interface) allows different software systems to communicate with each other
+In your scenario:
+
+1. **Client**: 
+   - The **client** is the system or application that makes a request to the server.
+   - This could be a **web browser**, **Postman**, **cURL**, or any other HTTP client.
+   - For example, when you open your browser and type `http://localhost:6000`, your browser sends an HTTP request to your server, making the browser the client in this case.
+
+2. **Server**: 
+   - The **server** is your **Node.js application** that is running the code from your `index.js` file.
+   - The server **receives the request** from the client, processes it, and then **sends a response** back. In your example, the response is a JSON object with the
+     details `{ name: 'Sachin', email: 'sachin@gmail.com' }`.
+
+ To summarize:
+- **Client**: Your web browser or Postman (or any tool that makes an HTTP request to your API).
+- **Server**: Your Node.js program running on `http://localhost:6000`, handling requests and sending responses.
+
+-----------------------------------------------------------------------------------------
+// Import the built-in 'http' module
+const http = require('http');
+
+// Create an HTTP server
+http.createServer((req, res) => {
+    // Set the response status and headers
+    res.writeHead(200, { 'Content-Type': 'application/json' });
+
+    // Write the response data in JSON format
+    res.write(JSON.stringify({ name: 'Sachin', email: 'sachin@gmail.com' }));
+
+    // End the response
+    res.end();
+})
+// Make the server listen on port 6000
+.listen(6000, () => {
+    console.log('Server is running on http://localhost:6000');
+});
+
