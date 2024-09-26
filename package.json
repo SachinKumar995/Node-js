@@ -1,0 +1,9 @@
+. It contains essential information about your Node.js project, such as the name, version, description, author, and most importantly,
+   the dependencies (packages your project needs to run) and scripts to automate tasks.
+
+how to create 
+npm init
+
+---------------------------------------------------
+how to add packages
+npm i colors
