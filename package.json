@@ -7,3 +7,7 @@ npm init
 ---------------------------------------------------
 how to add packages
 npm i colors
+
+--------------------------------------------------------------
+what is node-module
+it contain details about package.json folder since package.json contain the details of project 
