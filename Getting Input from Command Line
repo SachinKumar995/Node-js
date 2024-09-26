@@ -1,0 +1,49 @@
+here we will do 3 thins
+1) get input from command line
+2) crete file with input
+3)delete file from input
+
+
+------------------------------------------------------how to get input from command line ----------------
+In Node.js, process is a global object that provides information about the current Node.js instance and the environment in which it is running
+console.log(process.argv)
+
+node ./cmd.js
+after running it will print 
+[
+  'C:\\Program Files\\nodejs\\node.exe',
+  'F:\\Angular Project\\Node-1st\\cmdInput.js',
+]
+now  node ./cmd.js sachin 
+output 
+[
+  'C:\\Program Files\\nodejs\\node.exe',
+  'F:\\Angular Project\\Node-1st\\cmdInput.js',
+  'sachin'
+]
+
+--------------------------------------------Create File using cmd line input------------------------------
+
+const fs=require('fs');
+
+const input=process.argv;
+fs.writeFileSync(input[2],input[3]);
+
+run like this 
+node ./cmd.js sachin.txt 'My name is sachin '
+now you will get file and content in that file
+
+--------------------------------------------Delete File using cmd line input------------------------------
+const fs=require('fs');
+
+const input=process.argv;
+if(input[2]=='add'){
+fs.writeFileSync(input[3],input[4]);
+}else if(input[2]=='remove'){
+    fs.unlinkSync(input[3])
+}else{
+    console.log('invalid input')
+}
+
+run like this node .\cmd.js add teja.txt 'she is cute'
+run like this node .\cmd.js remove sachin.txt
