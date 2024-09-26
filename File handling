@@ -13,3 +13,32 @@ fs.readdir(dirt,(err,files)=>{
         
     })
 })
+--------------------------------CRUD-----------------------------------------------------------
+1) write
+const path1 = require('path');  // Import the 'path' module
+const fs = require('fs');       // Import the 'fs' module
+
+// Construct the directory path 'crud'
+const dirt1 = path1.join(__dirname, 'crud');
+
+// Construct the full file path using 'path1.join()'
+const filepath = path1.join(dirt1, 'tejaswini.txt');
+
+----------read-------------------------
+fs.readFile(filepath,'utf8',(err,item)=>{
+    console.log(item)
+})
+---------------update-----------------
+fs.appendFile(filepath,'The file name is changed',(err)=>{
+    if(!err){
+        console.log("file is updated")
+    }
+})
+----------------------rename---------------
+const filepath = path1.join(dirt1, 'tejaswini.txt');
+const newfile=path1.join(dirt1, 'tejaswini_sac.txt');
+fs.rename(filepath,newfile,(err)=>{
+if(!err){
+    console.log('file name is updated')
+}
+})
