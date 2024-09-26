@@ -1,0 +1,15 @@
+here i have made a folder manually now inside the folder i want to make files using code
+const fs = require('fs');
+const path=require('path');
+const dirt=path.join(__dirname,'files');
+console.log(dirt);
+for(i=0;i<5;i++){
+    fs.writeFileSync(dirt+"/sachin"+i+".txt","Sachin tejaswini");
+}
+-----------------------------------how to read files in folder------------------------------------
+fs.readdir(dirt,(err,files)=>{
+    files.forEach((item)=>{
+        console.log("file name is ",item)
+        
+    })
+})
