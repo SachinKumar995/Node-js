@@ -1,0 +1,24 @@
+Synchronous program
+console.log('A);
+console.log('B);
+console.log('C);
+
+output A
+       B
+       C
+
+here 2nd program is running after 1st so they will run in sequence manner
+
+Asynchronous program
+if 2nd operation taking time so 3rd one will execute 
+console.log('A)
+setTimeout(()=>{
+console.log('B)
+},2000)
+
+console.log('C')
+
+output
+A 
+C 
+B
